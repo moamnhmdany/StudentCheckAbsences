@@ -4,6 +4,7 @@ import React from 'react'
 const stages = () => {
   return (
     <View>
+      hi  
       <Text>stages</Text>
     </View>
   )
