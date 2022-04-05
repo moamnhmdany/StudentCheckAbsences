@@ -24,8 +24,9 @@ const login = () => {
         <Text style={{margin:7}} >الرمز السري</Text>
 
         <TextInputPass
+        placeholder1='الرمز السري'
         secureTextEntry1={true}
-        placeholder1='  الرمز السري للمستخدم'/>
+        />
       </View>
       <View style={styles.btnContaier}>
         <Button1 

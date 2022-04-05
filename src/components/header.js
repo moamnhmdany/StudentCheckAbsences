@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     borderBottomStartRadius:40,
     borderColor:'white',
     height :'30%',
-    backgroundColor:'#BF214B'
+    backgroundColor:'#BF214B',
+    
   },
   img3:{
     width:'50%',
