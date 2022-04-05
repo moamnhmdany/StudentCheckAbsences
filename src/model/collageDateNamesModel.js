@@ -1,9 +1,11 @@
-class collageDateNamesModel {
+class CollageDateNamesModel {
 
-    constructor( collageId,    collageName ){
+    constructor( collageId, collageName  ){
 
-        this.collageId = collageId ;
-        this.collageName = collageName ;
+        this.collageId1 = collageId ;
+        this.collageName1 = collageName ;
     }
 
 }
+
+export default CollageDateNamesModel

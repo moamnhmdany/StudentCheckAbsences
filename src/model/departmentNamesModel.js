@@ -1,4 +1,4 @@
-class departmentNamesModel {
+class DepartmentNamesModel {
 
     constructor(departmentId,    departmentName ){
 
@@ -6,4 +6,6 @@ class departmentNamesModel {
         this.departmentName = departmentName;
       }
 
-}
+} 
+
+export default DepartmentNamesModel ;

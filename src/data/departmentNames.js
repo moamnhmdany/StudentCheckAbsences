@@ -1,6 +1,6 @@
-import departmentNamesModel from '../model/departmentNamesModel';
+import DepartmentNamesModel from '../model/DepartmentNamesModel';
 
 export const departmentNamesModel = [
-    new (1, 'قسم البرمجيات')
+    new DepartmentNamesModel(1, 'قسم البرمجيات')
 ]
 

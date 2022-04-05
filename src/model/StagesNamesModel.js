@@ -7,3 +7,5 @@ class StagesNamesModel {
       }
 
 }
+ 
+export default StagesNamesModel;
