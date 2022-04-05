@@ -1,6 +1,6 @@
 import CollageDateNamesModel from '../model/CollageDateNamesModel';
 
-export const collageDateNames = [
+export  const collageDateNames = [
     new CollageDateNamesModel(1,'كلية علوم الحاسوب والرياضيات'),
     new CollageDateNamesModel(2,'كلية الهندسة'),
     new CollageDateNamesModel(3,'كلية العلوم'),
