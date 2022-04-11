@@ -1,9 +1,11 @@
 class DepartmentNamesModel {
 
-    constructor(departmentId,    departmentName ){
+    constructor(departmentId,    departmentName ,departmentImgUrl, collagld ){
 
         this.departmentId = departmentId ;
         this.departmentName = departmentName;
+        this.departmentImgUrl = departmentImgUrl;
+        this.collagld = collagld;
       }
 
 } 

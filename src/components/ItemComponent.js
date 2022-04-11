@@ -8,10 +8,11 @@ let height = Dimensions.get('window').height;
 
 
 const ItemComponent = props => {
-  console.log("calc : ",12/ 1.661111111111111)
   return (
     <View style={styles.itemContainer}>
-       <TouchableOpacity>
+       <TouchableOpacity 
+       onPress={props.onPress}
+       >
        <Card style={styles.card1}>
          <Image
           source={props.Url1}
@@ -32,11 +33,10 @@ const styles = StyleSheet.create({
     //alignSelf:"center",
     width:width/2.5,
     height:height/5,
-  
-  alignContent:'center',
-  marginLeft:(width-(width/2.5*2))/3,
-  marginTop:height/50,
-  borderRadius:width/30,
+   alignContent:'center',
+   marginLeft:(width-(width/2.5*2))/3,
+   marginTop:height/50,
+   borderRadius:width/30,
 },
 card1:{
   width:width/2.5,

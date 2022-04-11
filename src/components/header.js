@@ -1,13 +1,25 @@
-import { View, Image,StyleSheet } from 'react-native'
-import React from 'react'
-import classroom  from '../../assets/classroom.png'
-const header = () => {
+import { View, Image,StyleSheet ,TouchableOpacity} from 'react-native';
+import React from 'react';
+import classroom  from '../../assets/classroom.png';
+import menu from '../../assets/menu.png'
+const header = props => {
   return (
     <View style={styles.headerStyle}>
+      <TouchableOpacity
+      onPress={()=>{
+        props.navigation55.toggleDrawer();
+
+      }}
+      >
+        <Image
+        style={styles.menuStyle}
+        source={menu}/>
+      </TouchableOpacity>
     <Image 
      source={classroom}
      style={styles.img3}
     />
+
     </View>
   )
 }
@@ -27,6 +39,11 @@ const styles = StyleSheet.create({
     width:'50%',
     height:'50%',
      resizeMode:'center'
+  },
+  menuStyle:{
+    width:33,
+    height:33,
+    marginLeft:300,
   }
 })
 export default header
