@@ -1,7 +1,23 @@
 import { createStackNavigator} from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import *as Screens from "../screens";
-import {createDrawerNavigator} from 'react-navigation-drawer'
+import {createDrawerNavigator,DrawerItems} from 'react-navigation-drawer';
+import { View ,Text,StyleSheet,Image} from 'react-native'
+import React from 'react'
+import { Container, Content, Header, Body ,NativeBaseProvider } from 'native-base';
+
+const CustomDrawerContentComponent = (props) => (
+     
+      <View style={{ flex:1,flexDirection: 'row',marginTop:40,} }>   
+      <DrawerItems      
+      itemStyle={{margin:4,width:'100%',}}
+      itemsContainerStyle={{width:'100%'}}
+      {...props} />
+   
+       </View>   
+     
+    
+  );
 
 const ScreensApp= createStackNavigator(
 {
@@ -15,8 +31,22 @@ const ScreensApp= createStackNavigator(
 )
  
 const SideNav = createDrawerNavigator({
- Main :{screen:ScreensApp},
- logOut:{screen:Screens.LoginScreen},
-});
+ Main :{screen:ScreensApp,navigationOptions:{title:'الرئيسية'}},
+ Collage:{screen:Screens.CollageScreen,navigationOptions:{title:'الكليات'}},
+ logOut:{screen:Screens.LoginScreen,navigationOptions:{title:'تسجيل خروج'}},
+},
+
+{drawerPosition:'left',
+drawerWidth:'35%',
+contentComponent:CustomDrawerContentComponent,
+}
+);
+
+const styles = StyleSheet.create({
+
+   
+  
+  })
+
  const MainNav = createAppContainer(SideNav)
 export default MainNav;

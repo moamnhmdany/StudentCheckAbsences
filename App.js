@@ -4,7 +4,7 @@ import * as Screens from './src/screens';
 import MainNav from './src/components/navication';
 export default function App() {
   return (
-    <MainNav />
+    <Screens.LecturesScreen />
   );
 }
 

@@ -18,6 +18,7 @@
     "expo-font": "^10.0.5",
     "expo-sqlite": "~10.1.0",
     "expo-status-bar": "~1.2.0",
+    "native-base": "^3.4.1",
     "react": "17.0.1",
     "react-checkmark": "^1.4.0",
     "react-dom": "17.0.1",
@@ -26,6 +27,7 @@
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-table-component": "^1.2.2",
     "react-native-web": "0.17.1",
     "react-navigation-drawer": "^2.7.2",
     "react-navigation-stack": "^2.10.4"
