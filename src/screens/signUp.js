@@ -58,7 +58,7 @@ const signUp = (props) => {
         [name, pass, email],
         () => {
           console.log("table is inserted");
-          props.navigation.replace("collage");
+          props.navigation.replace("main");
         },
         (txObj, err) => {
           console.log("insert err==> ", err);
@@ -97,7 +97,7 @@ const signUp = (props) => {
         <Text>الاسم الكامل</Text>
         <TextInput2
           onChangeText1={(text) => {
-            setName(text.replace(/\s/g, ""));
+            setName(text);
           }}
           value1={name}
         />

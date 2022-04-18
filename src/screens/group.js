@@ -19,11 +19,11 @@ const group = props => {
     idCol={x.item.groupName}    
     Url1={x.item.groupImgUrl}
     onPress={()=>{
-      console.log('go to stages')
+      console.log('go to Lecture',x.item.groupId)
      // switch x.item.DpartmentId
-      // if(x.item.departmentId==1){
-      //   props.navigation.navigate('stage',{departId:x.item.departmentId})
-      // }
+       if(x.item.groupId==1){
+         props.navigation.navigate('lecture')
+       }
     }
   }
       /> 

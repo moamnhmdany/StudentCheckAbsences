@@ -1,7 +1,6 @@
 import { View, Text ,Image,StyleSheet,TouchableOpacity,Dimensions} from 'react-native';
 import React from 'react';
 import Card from '../components/card';
-import gg from '../../assets/manager.png'
 let width = Dimensions.get('window').width;
 let height = Dimensions.get('window').height;
 

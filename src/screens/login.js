@@ -37,7 +37,7 @@ const login = (props) => {
           console.log(_array);
           if(_array.length > 0){
            // setIsCheck(true);
-            props.navigation.replace('collage')
+            props.navigation.replace('main')
           }else{
             //setIsCheck(false);
             console.warn('wrong password or email')

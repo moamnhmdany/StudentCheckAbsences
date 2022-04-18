@@ -4,7 +4,7 @@ import Header from '../components/header'
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 let widthD = Dimensions.get('screen').width;
 let hightD = Dimensions.get('screen').height;
-const Lectures = () => {
+const Lectures = props => {
 
   const stateData = {
     tableHead: ['اليوم', 'المحاضرة الاولى', 'المحاضرة الثانية', 'المحاضرة الثالثة'],
@@ -47,7 +47,9 @@ const Cell = ({data,onPress}) => (
 
   return (
     <View style={styles.LectureContainer}>
-      <Header />
+      <Header
+      navigation55={props.navigation}
+      />
       <View style={styles.tableStyle} >
       <View style={styles.rowDay}>
        {stateData.tableHead.map((e,i)=>{
@@ -140,4 +142,7 @@ const styles = StyleSheet.create({
         }  
  
 })
-export default Lectures
+Lectures.navigationOptions = {
+  headerShown: false,
+}
+export default Lectures;
