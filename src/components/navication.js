@@ -31,6 +31,7 @@ const ScreensApp = createStackNavigator({
   stage: { screen: Screens.StagesScreen },
   group: { screen: Screens.GroupScreen },
   lecture: { screen: Screens.LecturesScreen },
+  check:{screen:Screens.CheckScreen,}
 });
 // const logStack = createStackNavigator({
 
@@ -45,14 +46,14 @@ const SideNav = createDrawerNavigator(
       navigationOptions: { title: "الكليات" },
     },
     logOut: {
-      screen: Screens.LoginScreen,
+      screen: ScreensApp,
       navigationOptions: { title: "تسجيل خروج" },
     },
   },
 
   {
-    drawerPosition: "left",
-    drawerWidth: "35%",
+    drawerPosition: "right",
+    drawerWidth: "50%",
     contentComponent: CustomDrawerContentComponent,
   }
 );

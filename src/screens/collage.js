@@ -34,6 +34,7 @@ const collage = props => {
        data={collageDateNames}
        renderItem={rederItem1}
        numColumns={2}
+       keyExtractor={item=>item.collageId}
       />
     </View>
   )

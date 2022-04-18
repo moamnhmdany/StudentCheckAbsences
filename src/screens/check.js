@@ -118,6 +118,11 @@ const Check = (props) => {
             colorCheck={item. checkStatuse3 ? "green" : "blue"}
           />
         </View>
+        <View>
+          <TouchableOpacity>
+            <Text>تاكيد</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
   };

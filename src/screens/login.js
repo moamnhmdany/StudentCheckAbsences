@@ -72,7 +72,7 @@ const login = (props) => {
         <Text style={{ margin: 7 }}>الرمز السري</Text>
 
         <TextInputPass
-          placeholder1="                                                                                 الرمز السري"
+          placeholder1="  الرمز السري"
           secureTextEntry1={true}
           onChangeText1={(text) => {
             setPass(text);
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
   },
   imageContainrt: {
     alignItems: "center",
-    margin: 10,
-    height: "30%",
+    margin: 20,
+    height: 200,
   },
   btnContaier: {
     padding: 20,

@@ -38,6 +38,7 @@ const departments = props => {
        data={filterDerpatment}
        renderItem={rederItem1}
        numColumns={2}
+       keyExtractor={item=>item.departmentId}
       />
     </View>
   )

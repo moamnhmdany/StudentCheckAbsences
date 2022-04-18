@@ -88,13 +88,13 @@ const signUp = (props) => {
     <ScrollView style={styles.SignUpStyle}>
       <View style={styles.img2Containar}>
         <Image source={school2} style={styles.img2} />
-        <Text style={{ margin: 1, fontSize: 39, opacity: 0.4, marginTop: 40 }}>
+        <Text style={{ margin: 1, fontSize: 25, marginTop: 40 }}>
           انشاء حساب
         </Text>
       </View>
 
       <View style={{ margin: 10, height: height }}>
-        <Text>الاسم الكامل</Text>
+        <Text>  الاسم الكامل</Text>
         <TextInput2
           onChangeText1={(text) => {
             setName(text);
@@ -108,7 +108,7 @@ const signUp = (props) => {
           }}
           value1={email}
         />
-        <Text>الرمز السري</Text>
+        <Text>  الرمز السري</Text>
         <TextInput2
           onChangeText1={(text) => {
             setPass(text);
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   },
   img2: {
     width: "50%",
-    height: "50%",
+    height: "60%",
     resizeMode: "contain",
   },
   img2Containar: {

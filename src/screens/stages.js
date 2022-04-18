@@ -40,6 +40,7 @@ const stages = props => {
        data={filterStaged}
        renderItem={rederItem1}
        numColumns={2}
+       keyExtractor={item=>item.StagesId}
       />
     </View>
   )

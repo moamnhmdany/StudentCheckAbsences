@@ -54,7 +54,9 @@ const Cell = ({data,onPress}) => (
       <View style={styles.rowDay}>
        {stateData.tableHead.map((e,i)=>{
          return(
-           <Row data={e} />
+           <Row
+           key={e}
+           data={e} />
           )
            })}   
         </View> 
@@ -69,7 +71,9 @@ const Cell = ({data,onPress}) => (
      {stateData.tableData.map((elment)=>{
       return <View style={styles.cellItems}>
          {elment.map((e)=>{
-          return (<Cell  data={e}/>)
+          return (<Cell
+             onPress={()=>props.navigation.navigate('check')}
+            data={e}/>)
          })}
          </View>
      })}  

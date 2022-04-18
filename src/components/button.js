@@ -26,7 +26,7 @@ const button = (props) => {
 }
 const styles = StyleSheet.create({
   btn1:{
-    backgroundColor:'#BF214B',
+    backgroundColor:'#FF6969',
     justifyContent:'center',
     alignItems:'center'    ,
     borderRadius:12,

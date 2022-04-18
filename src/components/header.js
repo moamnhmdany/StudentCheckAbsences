@@ -1,7 +1,9 @@
-import { View, Image,StyleSheet ,TouchableOpacity} from 'react-native';
+import { View, Image,StyleSheet ,TouchableOpacity,Dimensions} from 'react-native';
 import React from 'react';
 import classroom  from '../../assets/classroom.png';
 import menu from '../../assets/menu.png'
+let widthD = Dimensions.get('window').width;
+let heightD = Dimensions.get('window').height;
 const header = props => {
   return (
     <View style={styles.headerStyle}>
@@ -27,12 +29,14 @@ const styles = StyleSheet.create({
   headerStyle:{
     justifyContent:'center',
     alignItems:'center',
-    borderWidth:3,
+  
+    borderWidth:0,
     borderBottomEndRadius:40,
     borderBottomStartRadius:40,
     borderColor:'white',
     height :'30%',
-    backgroundColor:'#BF214B',
+    backgroundColor:'#FF6969',
+    
     
   },
   img3:{
@@ -43,7 +47,7 @@ const styles = StyleSheet.create({
   menuStyle:{
     width:33,
     height:33,
-    marginLeft:300,
+    marginRight:widthD/1.3,
   }
 })
 export default header

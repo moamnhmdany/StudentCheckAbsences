@@ -3,12 +3,13 @@ import * as Screens from "./src/screens";
 import MainNav from "./src/components/navication";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
+import { useState } from "react";
 
 export default function App() {
   const [fontLoaded, setfontLoaded] = useState(false);
   const fetchFonts = () => {
     return Font.loadAsync({
-      "Araz-Persian": require("./assets/Fonts/Araz-Persian-Font.ttf"),
+      "Sultan": require("./assets/Fonts/Sultan-bold.ttf"),
       
     });
   };
@@ -23,7 +24,7 @@ export default function App() {
     );
   }
 
-  return <Screens.MainScreen />;
+  return <Screens.CheckScreen/>;
 }
 
 const styles = StyleSheet.create({
