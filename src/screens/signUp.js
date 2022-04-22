@@ -46,7 +46,37 @@ const signUp = (props) => {
         (err) => {
           console.log("creat11111 err==> ", err);
         }
-      );
+      ),
+      tx.executeSql(
+        " CREATE TABLE IF NOT EXISTS Group1 ( idGroup1  INTEGER PRIMARY KEY , Group1Name  TEXT NULL,  Department  TEXT NULL,  Collage  TEXT NULL)",
+        null, 
+        () => {
+          console.log("CREATE Group1 done");
+        },
+        (err) => {
+          console.log("creat11111 Group1 err==> ", err);
+        }
+      ),
+      tx.executeSql(
+        "CREATE TABLE IF NOT EXISTS Lectures (idLectures INTEGER PRIMARY KEY,LecturesName TEXT NULL,LecturesDate TEXT NULL, LecturesNumber TEXT NULL)",
+        null,
+        () => {
+          console.log("CREATE Lectures done");
+        },
+        (err) => {
+          console.log("creat11111 Lectures err==> ", err);
+        }
+      ),
+      tx.executeSql(
+        "CREATE TABLE IF NOT EXISTS Students (idStudent INTEGER PRIMARY KEY,  StudentName TEXT  NULL,  StudentPresence TEXT NULL, StudentAbsence TEXT NULL, StudentVacation TEXT NULL,  idGroup1 INTEGER,  idLectures INTEGER,  userId INTEGER,     FOREIGN KEY (idGroup1) REFERENCES Group1(idGroup1) ON DELETE CASCADE ON UPDATE  CASCADE, FOREIGN KEY (idLectures) REFERENCES Lectures(idLectures) ON DELETE  CASCADE ON UPDATE  CASCADE, FOREIGN KEY (userId) REFERENCES users5(userId) ON DELETE  CASCADE ON UPDATE  CASCADE)",
+        null,
+        () => {
+          console.log("CREATE Students done");
+        },
+        (err) => {
+          console.log("creat11111  Students err==> ", err);
+        }
+      )
     });
   }, []);
 

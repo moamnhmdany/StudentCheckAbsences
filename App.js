@@ -24,7 +24,7 @@ export default function App() {
     );
   }
 
-  return <Screens.CheckScreen/>;
+  return <MainNav/>;
 }
 
 const styles = StyleSheet.create({

@@ -10,6 +10,7 @@ import {
 import { React, useState } from "react";
 import Header from "../components/header";
 import CheckBoxContainer from "../components/CheckBoxContainer";
+import BtnConfirm from "../components/button";
 
 let widthD = Dimensions.get("screen").width;
 let hightD = Dimensions.get("screen").height;
@@ -22,27 +23,51 @@ const Check = (props) => {
       idUser: 1,
       nameA: "moamn",
       checkStatuse: false,
-      checkStatuse2: false, 
-       checkStatuse3: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
     },
     {
       idUser: 2,
       nameA: "moamn",
       checkStatuse: false,
-      checkStatuse2: false, 
-       checkStatuse3: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
     },
     {
       idUser: 3,
       nameA: "moamn",
       checkStatuse: false,
-      checkStatuse2: false, 
-       checkStatuse3: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
     },
-    { idUser: 4, nameA: "moamn", checkStatuse: false, checkStatuse2: false, checkStatuse3: false, },
-    { idUser: 5, nameA: "moamn", checkStatuse: false , checkStatuse2: false,  checkStatuse3: false,},
-    { idUser: 6, nameA: "moamn", checkStatuse: false,  checkStatuse2: false, checkStatuse3: false, },
-    { idUser: 7, nameA: "moamn", checkStatuse: false , checkStatuse2: false,  checkStatuse3: false,},
+    {
+      idUser: 4,
+      nameA: "moamn",
+      checkStatuse: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
+    },
+    {
+      idUser: 5,
+      nameA: "moamn",
+      checkStatuse: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
+    },
+    {
+      idUser: 6,
+      nameA: "moamn",
+      checkStatuse: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
+    },
+    {
+      idUser: 7,
+      nameA: "moamn",
+      checkStatuse: false,
+      checkStatuse2: false,
+      checkStatuse3: false,
+    },
   ]);
   const [Ischeck, setCheck] = useState(true);
 
@@ -75,47 +100,44 @@ const Check = (props) => {
               const items = [...data];
               const _item = items.find((e) => e.idUser == item.idUser);
               _item.checkStatuse = t;
-              if(_item.checkStatuse)
-             { 
-             _item.checkStatuse2 = false;
-             _item.checkStatuse3= false ;
-            }
+              if (_item.checkStatuse) {
+                _item.checkStatuse2 = false;
+                _item.checkStatuse3 = false;
+              }
               changeData(items);
               console.log(items);
             }}
-            colorCheck={item.checkStatuse ? "green" : "blue"}
+            colorCheck={item.checkStatuse ? "green" : "#347deb"}
           />
           <CheckBoxContainer
             value={item.checkStatuse2}
             onValueChange={(t) => {
               const items = [...data];
               const _item = items.find((e) => e.idUser == item.idUser);
-              _item.checkStatuse2 = t
-              if(_item.checkStatuse2)
-              { ;
-              _item.checkStatuse = false;
-              _item.checkStatuse3= false ;
-             }
+              _item.checkStatuse2 = t;
+              if (_item.checkStatuse2) {
+                _item.checkStatuse = false;
+                _item.checkStatuse3 = false;
+              }
               changeData(items);
               console.log(items);
             }}
-            colorCheck={item.checkStatuse2 ? "green" : "blue"}
+            colorCheck={item.checkStatuse2 ? "green" : "#347deb"}
           />
           <CheckBoxContainer
-            value={item. checkStatuse3}
+            value={item.checkStatuse3}
             onValueChange={(t) => {
               const items = [...data];
               const _item = items.find((e) => e.idUser == item.idUser);
               _item.checkStatuse3 = t;
-              if(_item.checkStatuse3)
-              { 
-              _item.checkStatuse = false;
-              _item.checkStatuse2= false ;
-             }
+              if (_item.checkStatuse3) {
+                _item.checkStatuse = false;
+                _item.checkStatuse2 = false;
+              }
               changeData(items);
               console.log(items);
             }}
-            colorCheck={item. checkStatuse3 ? "green" : "blue"}
+            colorCheck={item.checkStatuse3 ? "green" : "#347deb"}
           />
         </View>
         <View>
@@ -152,7 +174,7 @@ const Check = (props) => {
           renderItem={checkBoxItemRender}
           style={{
             width: widthD / 1.17,
-            height: hightD / 1.8,
+            height: hightD / 2.2,
             borderWidth: 1,
             borderColor: "#d2d5d9",
           }}
@@ -160,6 +182,10 @@ const Check = (props) => {
             return item.idUser;
           }}
         />
+      </View>
+      <View style={{ flexDirection: "row", justifyContent: "center" }}>
+        <BtnConfirm style={styles.btnConfirmStyle} title1={"تأكيد"} />
+        <BtnConfirm style={styles.btnConfirmStyle} title1={"الغاء"} />
       </View>
     </View>
   );
@@ -193,6 +219,15 @@ const styles = StyleSheet.create({
     height: hightD / 14,
     alignItems: "center",
     justifyContent: "center",
+  },
+  btnConfirmStyle: {
+    backgroundColor: "#eb4934",
+    width: widthD / 3,
+    height: hightD / 25,
+    margin: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 33,
   },
 });
 
